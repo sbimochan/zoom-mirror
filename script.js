@@ -1,7 +1,7 @@
 
 let streaming = false;
 let video = null;
-console.log(streaming);
+
 const compliments = [
 	"You're an awesome friend.",
 	"You're a gift to those around you.",
@@ -69,7 +69,7 @@ function startup() {
 			message_portion.innerText=""
 			const spinner = document.querySelector(".loader");
 			spinner.style.display="none"
-			console.log(streaming);
+			
 						setTimeout(() => {
 							const subtitlePortion = document.querySelector(
 								"#subtitle"
