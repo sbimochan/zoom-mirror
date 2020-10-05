@@ -29,7 +29,7 @@ const compliments = [
 	'You are making a difference.',
 	'You bring out the best in other people.',
 ];
-const message=document.querySelector(".message_portion");
+const message=document.querySelector(".message-portion");
 message.innerText =
 	"You need to allow webcam access first. We assure you that we don't capture or store any webcam images.";
 (function () {
@@ -65,8 +65,8 @@ function startup() {
 				if (isNaN(resultHeight)) {
 					resultHeight = width / (4 / 3);
         }else {
-			const message_portion = document.querySelector('.message_portion');
-			message_portion.innerText=""
+			const messagePortion = document.querySelector('.message-portion');
+			messagePortion.innerText=""
 			const spinner = document.querySelector(".loader");
 			spinner.style.display="none"
 			
