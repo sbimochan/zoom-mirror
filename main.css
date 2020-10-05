@@ -19,7 +19,6 @@ body {
   padding-top: 20px;
 }
 
-
 #camera {
   display: flex;
   align-items: center;
@@ -63,6 +62,7 @@ body {
         background-position: 0% 50%;
     }
 }
+
 .loader {
   border: 16px solid #f3f3f3; /* Light grey */
   border-top: 16px solid limegreen; /* Blue */
