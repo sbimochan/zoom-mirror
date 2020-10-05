@@ -42,6 +42,7 @@ body {
   --borderWidth: 8px;
   background: #1D1F20;
   position: relative;
+  width: 100%;
   border-radius: var(--borderWidth);
   transition: opacity .5s;
 }
@@ -76,4 +77,12 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+
+@media only screen and (max-width: 600px) {
+  #video{
+
+  width: 100%;
+  height: 100%;
+  }
 }
