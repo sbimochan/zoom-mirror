@@ -2,8 +2,6 @@ html, body {
   height: 100%;
 }
 
-
-
 body {
   display: flex;
   justify-content: center;
@@ -12,12 +10,22 @@ body {
   background: #1D1F20;
 }
 
+.video-window-wrapper {
+  position: relative;
+}
+
 #subtitle {
   color: #eee;
   font-family: 'Raleway';
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 20px;
+  position: absolute;
+  bottom: -65px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
 }
 
 #camera {
@@ -36,6 +44,12 @@ body {
   position: relative;
   width: 100%;
   border-radius: var(--borderWidth);
+  transition: opacity .5s;
+}
+
+.gradient-border--hidden{
+  display: none;
+  opacity: 0;
 }
 
 .gradient-border:after {
@@ -65,15 +79,10 @@ body {
     }
 }
 
-
-
-
 @media only screen and (max-width: 600px) {
   #video{
 
   width: 100%;
   height: 100%;
-
-
-}
+  }
 }
