@@ -10,6 +10,10 @@ body {
   background: #1D1F20;
 }
 
+.video-window-wrapper {
+  position: relative;
+}
+
 #subtitle {
   color: #eee;
   font-family: 'Raleway';
@@ -17,6 +21,11 @@ body {
   align-items: center;
   justify-content: center;
   padding-top: 20px;
+  position: absolute;
+  bottom: -65px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
 }
 
 #camera {
