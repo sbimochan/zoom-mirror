@@ -10,16 +10,15 @@ body {
   background: #1D1F20;
 }
 
-#subtitle ,.message-portion{
+#subtitle {
   color: #eee;
   font-family: 'Raleway';
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.message-portion{
   padding-top: 20px;
 }
+
 
 #camera {
   display: flex;

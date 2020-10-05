@@ -29,7 +29,7 @@ const compliments = [
 	'You are making a difference.',
 	'You bring out the best in other people.',
 ];
-const message=document.querySelector(".message-portion");
+const message=document.querySelector("#subtitle");
 message.innerText =
 	"You need to allow webcam access first. We assure you that we don't capture or store any webcam images.";
 (function () {
@@ -65,18 +65,13 @@ function startup() {
 				if (isNaN(resultHeight)) {
 					resultHeight = width / (4 / 3);
         }else {
-			const messagePortion = document.querySelector('.message-portion');
-			messagePortion.innerText=""
+			message.innerText=""
 			const spinner = document.querySelector(".loader");
 			spinner.style.display="none"
 			
 						setTimeout(() => {
-							const subtitlePortion = document.querySelector(
-								"#subtitle"
-							);
-							
 							const random = Math.floor(Math.random() * compliments.length);
-							subtitlePortion.innerHTML += `<h3>${compliments[random]}</h3> <p><span>&#128076;&#127996;</span>`;
+							message.innerHTML += `<h3>${compliments[random]}</h3> <p><span>&#128076;&#127996;</span>`;
 						}, 2500);
 					}
 
