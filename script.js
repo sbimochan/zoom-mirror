@@ -67,6 +67,8 @@ function startup() {
         }else {
 			const message_portion = document.querySelector('.message_portion');
 			message_portion.innerText=""
+			const spinner = document.querySelector(".loader");
+			spinner.style.display="none"
 			console.log(streaming);
 						setTimeout(() => {
 							const subtitlePortion = document.querySelector(
