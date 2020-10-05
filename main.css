@@ -9,6 +9,7 @@ body {
   align-items: center;
   height: 100%;
   background: #1d1f20;
+  overflow-y: hidden; 
 }
 
 .video-window-wrapper {
