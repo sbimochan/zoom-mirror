@@ -35,6 +35,12 @@ subtitle.innerText =
 	window.addEventListener("load", startup, false);
 })();
 
+function swapSpinnerWithVideo(){
+	document.querySelector('.spinner').classList.add('spinner--hidden');
+	document.querySelector('.gradient-border').classList.remove('gradient-border--hidden');
+}
+
+
 function startup() {
 	video = document.getElementById("video");
 	canvas = document.getElementById("canvas");
@@ -53,6 +59,8 @@ function startup() {
 		"canplay",
 		function (ev) {
 			if (!streaming) {
+				swapSpinnerWithVideo();
+
 				const width = 1024;
 				const height = 768;
 				let resultHeight =
@@ -65,9 +73,6 @@ function startup() {
 					resultHeight = width / (4 / 3);
 				} else {
 					subtitle.innerText = "";
-					const spinner = document.querySelector(".loader");
-					spinner.style.display = "none";
-
 					setTimeout(() => {
 						const random = Math.floor(
 							Math.random() * compliments.length
