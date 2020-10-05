@@ -1,7 +1,7 @@
 
 let streaming = false;
 let video = null;
-
+console.log(streaming);
 const compliments = [
 	"You're an awesome friend.",
 	"You're a gift to those around you.",
@@ -29,10 +29,13 @@ const compliments = [
 	'You are making a difference.',
 	'You bring out the best in other people.',
 ];
-
+const message=document.querySelector(".message_portion");
+message.innerText =
+	"You need to allow webcam access first. We assure you that we don't capture or store any webcam images.";
 (function () {
   window.addEventListener('load', startup, false);
 })();
+
 
 function startup() {
 	video = document.getElementById('video');
@@ -55,15 +58,21 @@ function startup() {
         const width = 1024;
 				const height = 768; 
 				let resultHeight = video.videoHeight / (video.videoWidth / width);
-
+				
 				// Firefox currently has a bug where the height can't be read from
 				// the video, so we will make assumptions if this happens.
 
 				if (isNaN(resultHeight)) {
 					resultHeight = width / (4 / 3);
         }else {
+			const message_portion = document.querySelector('.message_portion');
+			message_portion.innerText=""
+			console.log(streaming);
 						setTimeout(() => {
-							const subtitlePortion = document.getElementById('subtitle');
+							const subtitlePortion = document.querySelector(
+								"#subtitle"
+							);
+							
 							const random = Math.floor(Math.random() * compliments.length);
 							subtitlePortion.innerHTML += `<h3>${compliments[random]}</h3> <p><span>&#128076;&#127996;</span>`;
 						}, 2500);
