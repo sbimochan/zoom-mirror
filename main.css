@@ -97,3 +97,20 @@ body {
     height: 100%;
   }
 }
+.mirror-camera{
+  position:absolute;
+  top: -45px;
+  background-color:  #811936;
+  color:#ffffff;
+  font-family: 'Raleway';
+  border-radius: 5px;  
+  padding: 5px;
+  cursor:pointer;
+  display:none;
+}
+
+.flip-video{
+    transform: rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+    -webkit-transform:rotateY(180deg);    
+}
