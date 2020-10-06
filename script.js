@@ -1,7 +1,7 @@
 let streaming = false;
 let video = null;
-let mirrorCamera=null;
-let flipVideo=false;
+let mirrorCamera = null;
+let flipVideo = false;
 
 const compliments = [
   "You're an awesome friend.",
@@ -45,8 +45,8 @@ function swapSpinnerWithVideo() {
 function startup() {
   video = document.getElementById('video');
   canvas = document.getElementById('canvas');
-  mirrorCamera= document.querySelector('.mirror-camera');
-  mirrorCamera.addEventListener('click',checkMirrorCamera)
+  mirrorCamera = document.querySelector('.mirror-camera');
+  mirrorCamera.addEventListener('click', checkMirrorCamera)
 
   navigator.mediaDevices
     .getUserMedia({ video: true, audio: false })
@@ -74,7 +74,7 @@ function startup() {
         if (isNaN(resultHeight)) {
           resultHeight = width / (4 / 3);
         } else {
-          mirrorCamera.style.display="block";
+          mirrorCamera.style.display = "block";
           subtitle.innerText = '';
           setTimeout(() => {
             const random = Math.floor(Math.random() * compliments.length);
@@ -91,14 +91,14 @@ function startup() {
   );
 }
 
-function checkMirrorCamera(){
-  if(!flipVideo){
+function checkMirrorCamera() {
+  if (!flipVideo) {
     video.classList.add("flip-video");
-    mirrorCamera.style.background="#a53e5b";
-    flipVideo=true;
-  }else{
+    mirrorCamera.style.opacity = "0.8";
+    flipVideo = true;
+  } else {
     video.classList.remove("flip-video");
-    mirrorCamera.style.background="#a01f43";
-    flipVideo=false;
+    mirrorCamera.style.opacity = "0.4";
+    flipVideo = false;
   }
 }

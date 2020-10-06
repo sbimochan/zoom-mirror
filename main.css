@@ -39,6 +39,12 @@ body {
   font-size: 2.5rem;
 }
 
+#video{
+  transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);    
+}
+
 /* Gradient credit: https://codepen.io/mike-schultz */
 .gradient-border {
   --borderWidth: 8px;
@@ -97,20 +103,36 @@ body {
     height: 100%;
   }
 }
-.mirror-camera{
-  position:absolute;
-  top: -45px;
-  background-color:  #811936;
-  color:#ffffff;
-  font-family: 'Raleway';
-  border-radius: 5px;  
-  padding: 5px;
-  cursor:pointer;
-  display:none;
+
+.mirror-camera {
+  position: absolute;
+  right: 12px;
+  bottom: 15px;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #1d377e;
+  border-radius: 100px;
+  -webkit-box-shadow: 4px 5px 9px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 5px 9px 0px rgba(0,0,0,0.75);
+  box-shadow: 4px 5px 9px 0px rgba(0,0,0,0.75);
+  width: 60px;
+  height: 60px;
+  opacity: 0.4;
+  transition: .3s;
 }
 
-.flip-video{
-    transform: rotateY(180deg);
-    -moz-transform:rotateY(180deg);
-    -webkit-transform:rotateY(180deg);    
+.mirror-camera:hover {
+  opacity: 100 !important;
+  transition: .3s;
+}
+
+.mirror-camera img {
+  width: 90%;
+}
+
+.flip-video {
+  transform: none !important;
+  -moz-transform: none !important;
+  -webkit-transform: none !important;  
 }
