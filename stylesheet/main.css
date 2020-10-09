@@ -23,8 +23,8 @@ body {
   align-items: center;
   justify-content: center;
   padding-top: 20px;
-  position: absolute;
-  bottom: -65px;
+  position: fixed;
+  bottom: 50px;
   left: 50%;
   width: 100%;
   transform: translateX(-50%);
@@ -45,8 +45,20 @@ body {
   -webkit-transform: rotateY(180deg);
 }
 
-.camera_arrow img {
+.camera_arrow{
+  position: relative;
+}
+
+.camera_arrow img:first-child {
   width: 100%;
+}
+
+img.animate_arrow{
+  animation: bounce 2s ease alternate infinite;
+  animation-delay: 1s;
+      position: absolute;
+    right: 250px;
+    top: 80px;
 }
 
 /* Gradient credit: https://codepen.io/mike-schultz */
@@ -100,6 +112,12 @@ body {
     background-position: 0% 50%;
   }
 }
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+  40% {transform: translateY(-25px);} 
+  60% {transform: translateY(-15px);} 
+} 
 
 @media only screen and (max-width: 600px) {
   #video {
