@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zoom Mirror</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="main.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="spinner.css" type="text/css" media="all" />
-  </head>
-  <body>
-    <div class="video-window-wrapper">
-      <div class="spinner">
-        <div class="sk-cube-grid">
-          <div class="sk-cube sk-cube1"></div>
-          <div class="sk-cube sk-cube2"></div>
-          <div class="sk-cube sk-cube3"></div>
-          <div class="sk-cube sk-cube4"></div>
-          <div class="sk-cube sk-cube5"></div>
-          <div class="sk-cube sk-cube6"></div>
-          <div class="sk-cube sk-cube7"></div>
-          <div class="sk-cube sk-cube8"></div>
-          <div class="sk-cube sk-cube9"></div>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zoom Mirror</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./stylesheet/main.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="./stylesheet/spinner.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <div class="video-window-wrapper">
+    <div class="spinner">
+      <div class="sk-cube-grid">
+        <div class="sk-cube sk-cube1"></div>
+        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-cube sk-cube3"></div>
+        <div class="sk-cube sk-cube4"></div>
+        <div class="sk-cube sk-cube5"></div>
+        <div class="sk-cube sk-cube6"></div>
+        <div class="sk-cube sk-cube7"></div>
+        <div class="sk-cube sk-cube8"></div>
+        <div class="sk-cube sk-cube9"></div>
       </div>
-      <div class="gradient-border gradient-border--hidden" id="camera">
-        <video id="video">Video stream not available.</video>
-        <button type="button" class="mirror-camera"><img src="rotate-camera-icon.svg"></button>
-      </div>
-      <div id="subtitle"></div>
     </div>
-  </body>
-  <script src="script.js"></script>
+    <div class="gradient-border gradient-border--hidden" id="camera">
+      <video id="video">Video stream not available.</video>
+      <button type="button" class="mirror-camera">
+        <img src="./assets/images/rotate-camera-icon.svg" />
+      </button>
+    </div>
+    <div class="camera_arrow">
+      <img src="./assets/images/on_the_camera.png" alt="turn camera on arrow" />
+    </div>
+    <div id="subtitle"></div>
+  </div>
+</body>
+<script src="./scripts/main.js"></script>
 </html>
